@@ -28,15 +28,19 @@ Você pode usar o seguinte documento HTML como ponto de partida:
         <h1>Multiplication Table</h1>
         <script>
 
-            function nomeDaSuaFuncao(n) { // Substitua "nomeDaSuaFuncao" por um nome mais apropriado
-                // escreve a coluna inicial
-                let x = [];
-                for (let i = 0; i <= n; i++) {
-                    x[i] = [];
-                }
-                console.table(x)
-                // TODO: escrever dois loops aninhados para desenhar o array bidimencional e monstar o restante da tabela no console.
+        function multiplica(n){
+            let x = []
+
+            for(i = 0; i <= n; i++){
+                x[i] = []
+                    for(j = 0; j <= n; j++){
+                        x[i][j] = (i*j)
+                    }
             }
+            console.table(x)
+        }
+        multiplica()
+
         </script>
     </body>
 </html>
